@@ -23,9 +23,12 @@ public class PhoneBookAction {
 //            System.out.println("Bạn nhập sai dữ liệu, nhập lại tên");
 //            name=scanner.nextLine();
 //        }
+        System.out.println("Nhập địa chỉ: ");
+        String address = scanner.nextLine();
 
         System.out.println("Nhập số điện thoại:");
         String phoneNumber = scanner.nextLine();
+
         Pattern patternPhoneNumber=Pattern.compile("^[0][0-9]{9}");
         //ex 0978489648
         Matcher matcherPhoneNumble=patternPhoneNumber.matcher(phoneNumber);
@@ -33,10 +36,6 @@ public class PhoneBookAction {
             System.out.println("Bạn nhập sai dữ liệu, nhập lại Số điện thoại");
             name=scanner.nextLine();
         }
-        scanner.nextLine();
-
-        System.out.println("Nhập địa chỉ: ");
-        String address = scanner.nextLine();
 
         System.out.println("Nhập Email: ");
         String email = scanner.nextLine();
@@ -44,7 +43,7 @@ public class PhoneBookAction {
         Matcher matcherEmail = patternEmail.matcher(email);
         while (!matcherEmail.matches()){
             System.out.println("Bạn nhập sai dữ liệu, nhập lại email: ");
-            name = scanner.nextLine();
+            email = scanner.nextLine();
         }
 
         System.out.println("Nhập facebook: ");
@@ -75,24 +74,24 @@ public class PhoneBookAction {
             String name = scanner.nextLine();
 
             System.out.println("Nhập số điện thoại cần sửa:");
+            String address = scanner.nextLine();
+
             String newPhoneNumber = scanner.nextLine();
             System.out.println("Nhập địa chỉ cần sửa: ");
             Pattern patternPhoneNumber=Pattern.compile("^[0][0-9]{9}");
             Matcher matcherPhoneNumble=patternPhoneNumber.matcher(newPhoneNumber);
             while (!matcherPhoneNumble.matches()){
                 System.out.println("Bạn nhập sai dữ liệu, nhập lại Số điện thoại");
-                name=scanner.nextLine();
+                newPhoneNumber=scanner.nextLine();
             }
-            scanner.nextLine();
 
-            String address = scanner.nextLine();
             System.out.println("Nhập Email cần sửa: ");
             String email = scanner.nextLine();
             Pattern patternEmail = Pattern.compile("^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)$");
             Matcher matcherEmail = patternEmail.matcher(email);
             while (!matcherEmail.matches()){
-                System.out.println("Bạn nhập sai dữ liệu");
-                name = scanner.nextLine();
+                System.out.println("Bạn nhập sai dữ liệu, nhap lai email");
+                email = scanner.nextLine();
             }
 
             System.out.println("Nhập facebook cần sửa: ");
