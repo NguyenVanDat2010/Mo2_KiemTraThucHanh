@@ -73,11 +73,11 @@ public class PhoneBookAction {
             System.out.println("Nhập tên cần sửa: ");
             String name = scanner.nextLine();
 
-            System.out.println("Nhập số điện thoại cần sửa:");
+            System.out.println("Nhập địa chỉ cần sửa: ");
             String address = scanner.nextLine();
 
+            System.out.println("Nhập số điện thoại cần sửa:");
             String newPhoneNumber = scanner.nextLine();
-            System.out.println("Nhập địa chỉ cần sửa: ");
             Pattern patternPhoneNumber=Pattern.compile("^[0][0-9]{9}");
             Matcher matcherPhoneNumble=patternPhoneNumber.matcher(newPhoneNumber);
             while (!matcherPhoneNumble.matches()){
