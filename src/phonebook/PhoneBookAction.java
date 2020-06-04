@@ -52,7 +52,7 @@ public class PhoneBookAction {
         int newPhone=Integer.parseInt(phoneNumber) ;
         phoneBookList.add(new PhoneBook(name, newPhone, address, email, facebook));
         System.out.println("Danh sách sau khi thêm mới:");
-//        display(phoneBookList);
+        display(phoneBookList);
     }
 
     public void updatePhonebook(List<PhoneBook> phoneBookList) {
@@ -135,13 +135,12 @@ public class PhoneBookAction {
     }
 
     public void searchPhoneBook(List<PhoneBook> phoneBookList) {
-        System.out.println("Nhập số điện thoại hoặc họ tên cần tìm trong danh bạ: ");
+        System.out.println("Nhập số điện thoại cần tìm trong danh bạ: ");
         boolean check = false;
         int index = 0;
         int inputValue = scanner.nextInt();
         for (int i = 0; i < phoneBookList.size(); i++) {
             if ((phoneBookList.get(i).getPhoneNumber() == inputValue)) {
-//                    phoneBookList.get(i).getName().toLowerCase().contains(inputValue.toLowerCase())) {
                 index = i;
                 check = true;
                 break;
